@@ -6,6 +6,8 @@
     <META NAME="keywords" content="civilopedia,civilopedia online,civilization, civilization 6,civilization VI, civilization6, цивилопедия, цивилопедия 6, цивилопедия6">
     <META NAME="description" CONTENT="Перенос энциклопедии из игры CIVILIZATION VI. Цивилопедия 6 представляет собой подробное описание всех аспектов игры.">
 
+
+	
     <link rel="stylesheet" type="text/css" href="./StartPage_files/styles.css">
     <style>
 		.tabrow
@@ -53,7 +55,7 @@
     </div>
 
     <div class="content">
-        <div class="menu" style="overflow-y: auto; height:600px;>
+        <div class="menu" style="overflow-y: auto; height:550px; ">
 		
             <a href="http://www.example.com/civilopedia/ru-ru/CONCEPT_HOME.aspx"><div id="CONCEPT_HOME" class="menuitem">Игровые понятия</div></a>
             <div id="GROUP_HEADER_CITIES" class="menugroupcontainer">
@@ -234,8 +236,10 @@
         </div>
 
         <div>
-
-            <img src="./StartPage_files/POLICY_GENERAL.png" alt="Институты" class="contentimage" />
+		
+		
+        <img src="./StartPage_files/POLICY_GENERAL.png" alt="Институты" class="contentimage" /> 
+		
             <div class="contentleft">
                 &nbsp;
             </div>
@@ -250,35 +254,24 @@
                                         <div class="tl">
                                             <div class="tr">
                                                 <br />
-												
-												<?php
-												// Соединиться с сервером БД
-												mysql_connect("localhost", "root", "") or die (mysql_error ());
-
-												// Выбрать БД
-												mysql_select_db("civilopedia") or die(mysql_error());
-
-												// SQL-запрос
-												$strSQL = "SELECT * FROM test";
-
-												// Выполнить запрос (набор данных $rs содержит результат)
-												$rs = mysql_query($strSQL);
-												
-												// Цикл по recordset $rs
-												// Каждый ряд становится массивом ($row) с помощью функции mysql_fetch_array
-												while($row = mysql_fetch_array($rs)) {
-
-												   // Записать значение столбца FirstName (который является теперь массивом $row)
-												  echo $row['name'] . "<br />";
-
-												  }
-
-												// Закрыть соединение с БД
-												mysql_close();
-												?>
-												
-												
+													<?php
+													
+													$host="localhost";
+													$user="root";
+													$pass=""; //установленный вами пароль
+													$db_name="civilopedia";
+													$link=mysql_connect($host,$user,$pass) or die("Ошибка " . mysqli_error($link));
+													mysql_select_db($db_name,$link);
+													
+														$sql = mysql_query("SELECT * FROM `nations`");
+														while ($result = mysql_fetch_array($sql)) 
+														{
+															echo $result['name'].": ".$result['nations']." нация<br>";
+														}
+															mysql_close();
+													?>
 												<br />
+												<!-- "Честность - лучшая политика".<br /> - Мигель  де Сервантес -->
                                             </div>
                                         </div>
                                     </div>

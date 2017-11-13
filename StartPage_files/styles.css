@@ -3,6 +3,8 @@
     src: url(MinionPro-SemiboldIt.otf); /* Путь к файлу со шрифтом */
    }
 
+
+   
 *
 {
 	margin: 0px;
@@ -174,6 +176,7 @@ border: 4px double red;
 	float: left;
 	width: 272px;
 	margin-right: 18px;
+	direction: rtl;
 }
 .menu a
 {	background-color: blue;
