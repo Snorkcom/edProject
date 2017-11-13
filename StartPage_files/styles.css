@@ -106,7 +106,7 @@ body
 .content
 {
 
-	border: 4px double red;
+	/*border: 4px double red;*/
 	margin-left: 5px;
 	float: left;
 	width: 1024px;
@@ -129,7 +129,7 @@ body
 
 	/* scroll bar */
 	overflow-y: auto;
-	height:620px;
+	height:650px;
   direction: rtl;
 
   /*flex*/
