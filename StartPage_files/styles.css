@@ -1,36 +1,30 @@
-﻿@font-face {
+@font-face
+{
     font-family: CIV6; /* Гарнитура шрифта */
     src: url(MinionPro-SemiboldIt.otf); /* Путь к файлу со шрифтом */
-   }
+}
 
-
-   
 *
 {
 	margin: 0px;
 	padding: 0px;
 }
-body
-{
-	background-color: #000000;
-	color: #ffffc8;
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-size: 13px;
-	font-style: normal;
-	font-weight: normal;
-}
+
+
+
+/*ссылки*/
 a
 {
 	color: #ffffc8;
 	text-decoration: underline;
 }
+
+/*картинки*/
 img
 {
-	border: none;	
-	border: 4px double blue;
-	
 
 }
+
 h2
 {
 	border: 4px double red;
@@ -40,7 +34,215 @@ h2
 }
 
 
-/* Box */
+
+
+body
+{
+	background-color: #000000;
+	/*color: #ffffc8;*/
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+  color: #ffffc8;
+}
+
+/* Контейнер сверху*/
+.container
+{	/*border: 4px double white;*/
+	float: left;
+	width: 1024px;
+  margin-left: 5px;
+
+}
+
+/* Заголовок*/
+.header
+{
+	float: left;
+	width: 1024px;
+	height: 37px;
+	background-color: #381014;
+	text-align: center;
+  margin-top: 10px;
+	font-size: 24px;
+  background: url(Controls_SubHeader2.png);
+}
+
+.titlelink
+{
+    text-decoration: none;
+    color: #F3F7F3;
+    text-shadow: #EEEE00 0 0 10px; /* свечение текста */
+}
+
+/* Значки меню сверху */
+.tabrow
+{
+	float: left;
+	width: 1024px;
+	margin-left: 0px;
+	height: 48px;
+  background: url(topMenu.png) center no-repeat;
+
+  /*flex*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.tab
+{
+	float: left;
+	width: 42px;
+	height: 49px;
+	margin-left: 5px;
+	margin-right: 5px;
+  margin-top: 8px;
+}
+
+/* Основной контент */
+.content
+{
+
+	border: 4px double red;
+	margin-left: 5px;
+	float: left;
+	width: 1024px;
+  background-image: url(Parchment_Pattern.png);
+
+	/*background-repeat: no-repeat;
+	background-image: url('container.png');*/
+}
+
+
+/* Меню */
+.menu
+{
+	background-color: #381014;
+	margin-left: 0px;
+	float: left;
+	width: 250px;
+	margin-right: 18px;
+
+
+	/* scroll bar */
+	overflow-y: auto;
+	height:620px;
+  direction: rtl;
+
+  /*flex*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-flow: row wrap
+}
+.menugroupcontainer a
+{
+  text-decoration: none;
+}
+.menugroupcontainer
+{
+	float: left;
+	width: 300px;
+}
+.menugroup
+{
+	text-indent: 10px;
+	/*
+	float: left;
+	width: 272px;
+	height: 27px;*/
+	line-height: 25px;
+	vertical-align: middle;
+	background-image: url('/civilopedia/images/menugroup.png');
+	background-repeat: no-repeat;
+	text-shadow: #82A3A6 0em 0em 0.2em, #82A3A6 0em 0em 0.2em;
+}
+
+.menuitem
+{
+  padding-left:10px;
+	margin-left: 7px;
+  margin-right: 7px;
+  margin-top: 3px;
+  margin-bottom:3px;
+	/*float: left;
+	text-indent: 10px;
+	width: 256px;*/
+	height: 30px;
+	line-height: 25px;
+	vertical-align: middle;
+	background-image: url('menuitem.png');
+	background-repeat: no-repeat;
+  background-size: 100%;
+	text-decoration: none;
+  text-align: left;
+
+
+  color: #a69f91;
+  text-shadow: #232217 0 0 10px; /* свечение текста */
+
+}
+
+.contentcommon
+{
+
+}
+.contentimage
+{
+	position: absolute;
+	left: 290px;
+	top: 122px;
+}
+
+
+/* Left side of content */
+.contentleft
+{
+
+	float: left;
+	width: 220px;
+	margin-top: 256px;
+	margin-right: 18px;
+}
+
+.title
+{
+	margin-left: -20px;
+	width: 464px;
+	height: 36px;
+	font-size: 17px;
+	text-align: center;
+	/*background-image: url('/civilopedia/images/title.png');
+	background-repeat: no-repeat;*/
+	padding-top: 7px;
+	text-shadow: #92B3B6 0em 0em 0.2em, #92B3B6 0em 0em 0.2em, #92B3B6 0em 0em 0.2em, #92B3B6 0em 0em 0.2em;
+}
+
+.contentright
+{
+
+	font-family: CIV6, Verdana;
+	margin-top: 15px;
+	float: right;
+	width: 439px;
+	margin-right: 42px;
+}
+
+/* Большой блок контента */
+.contentwide
+{
+	float: right;
+	width: 677px;
+	margin-right: 42px;
+}
+
+
+
+/* Коробка */
 .t {
     background: url('t.png') 0 0 repeat-x #000;
     margin-bottom: 10px;
@@ -75,198 +277,20 @@ h2
     line-height: 22px
 }
 
-
-/* Styles to replace special tags in XML */
-.color_positive_text
-{
-	color: #7FFF19;
-}
-.color_warning_text
-{
-	color: #FF4C4C;
-}
-.color_cyan_text
-{
-	color: #00FFFF;
-}
-
-.header
-{
-	float: left;
-	width: 1024px;
-	height: 37px;
-	background-color: #000000;	
-	background-repeat: no-repeat;
-	text-align: center;
-	font-size: 20px;
-}
-
-.tabrow
-{
-	float: left;
-	width: 1024px;
-	margin-left: 0px;
-	height: 49px;
-	background-color: #000000;
-}
-.tab
-{
-	float: left;
-	width: 42px;
-	height: 49px;
-	margin-left: 5px;
-	margin-right: 5px;
-}
-
-.bordertop
-{
-	font-size: 16px;
-	text-align: center;
-	width: 100%;
-	float: left;
-	line-height: 38px;
-	height: 38px;
-	text-align: center;
-	background-image: url('/civilopedia/images/border_top.png');
-	background-repeat: no-repeat;
-	vertical-align: bottom;
-}
+/* Нижний уровень */
 .borderbottom
 {
 	font-size: 17px;
 	width: 100%;
 	float: left;
 	height: 54px;
-	text-align: center;	
+	text-align: center;
 	background-repeat: no-repeat;
 }
-
-.container
-{	border: 4px double white;
-	float: left;
-	width: 1024px;
-	
-	
-}
-
-.content
-{	
-border: 4px double red;
-	margin-left: 5px;
-	float: left;
-	width: 1013px;	
-	background-repeat: no-repeat;
-	/*background-image: url('container.png');*/
-	
-}
-
 .footer
 {
 	float: left;
 	width: 1024px;
 	text-align: center;
 	font-size: 10px;
-}
-
-/* Menu */
-.menu
-{
-	background-color: black;
-	margin-left: 0px;
-	float: left;
-	width: 272px;
-	margin-right: 18px;
-	direction: rtl;
-}
-.menu a
-{	background-color: blue;
-	text-decoration: none;
-}
-.menugroupcontainer
-{
-	float: left;
-	width: 272px;
-}
-.menugroup
-{
-	
-	text-indent: 10px;
-	
-	/*
-	float: left;	
-	width: 272px;
-	height: 27px;*/
-	line-height: 25px;
-	vertical-align: middle;
-	background-image: url('/civilopedia/images/menugroup.png');
-	background-repeat: no-repeat;
-	text-shadow: #82A3A6 0em 0em 0.2em, #82A3A6 0em 0em 0.2em;
-}
-
-.menuitem
-{
-	margin-left: 7px;
-	/*float: left;
-	text-indent: 10px;
-	width: 256px; 
-	height: 21px;*/
-	line-height: 19px;
-	vertical-align: middle;
-	background-image: url('/civilopedia/images/menuitem.png');
-	background-repeat: no-repeat;
-	text-decoration: none;
-}
-
-
-.contentimage
-{
-	
-	position: absolute;
-	left: 290px;
-	top: 122px;
-}
-
-/* Large block of content */
-.contentwide
-{
-	float: right;
-	width: 677px;
-	margin-right: 42px;
-}
-
-/* Left side of content */
-.contentleft
-{
-	
-	float: left;
-	width: 220px;
-	margin-top: 256px;
-	margin-right: 18px;
-}
-
-/* Right side of content */
-.contentright
-{
-	font-family: CIV6, Verdana;
-	margin-top: 15px;
-	float: right;
-	width: 439px;
-	margin-right: 42px;
-}
-
-.title
-{
-	margin-left: -20px;
-	width: 464px;
-	height: 36px;
-	font-size: 17px;
-	text-align: center;
-	background-image: url('/civilopedia/images/title.png');
-	background-repeat: no-repeat;
-	padding-top: 7px;
-	text-shadow: #92B3B6 0em 0em 0.2em, #92B3B6 0em 0em 0.2em, #92B3B6 0em 0em 0.2em, #92B3B6 0em 0em 0.2em;
-}
-.titlelink
-{
-    text-decoration: none;
 }
