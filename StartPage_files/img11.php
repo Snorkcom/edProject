@@ -1,1 +1,0 @@
-<img src="./StartPage_files/POLICY_GENERAL.png" alt="Институты" class="contentimage" />

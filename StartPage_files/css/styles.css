@@ -1,0 +1,320 @@
+﻿@font-face {
+    font-family: CIV6; /* Гарнитура шрифта */
+    src: url(../fonts/MyriadPro-Regular.otf); /* Путь к файлу со шрифтом */
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+p {
+	color:rgba(58, 56, 56, 0.8);
+	text-indent: 20px; 
+	font-size:16px;
+}
+
+
+/*ссылки*/
+a {
+    color: #ffffc8;
+    text-decoration: underline;
+}
+
+/*Сайт в центре*/
+.CenterDiv {
+	margin: 0px auto;
+    min-width:950px;
+    max-width:950px;
+    text-align:left;
+    
+}
+
+
+body {
+    background-color: #000000;    
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: normal;
+    color: #ffffc8;
+}
+
+/* Контейнер сверху*/
+.topContainer{ /*border: 4px double white;*/
+    float: left;
+    width: 1024px;
+    margin-left: 4.33px;
+/*__________________________________________________________________________________________________________________________________*/	
+	border: 3px solid white;    
+	border-image: url(../images/top/border.png) 3 stretch stretch;
+}
+
+/* Заголовок*/
+.header {
+    float: left;
+    width: 1024px;
+    height: 37px;
+    background-color: #381014;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 24px;
+    background: url(../images/top/Controls_SubHeader2.png);
+}
+
+.titlelink {
+    text-decoration: none;
+    color: #F3F7F3;
+    text-shadow: #EEEE00 0 0 10px; /* свечение текста */
+}
+
+/* Значки меню сверху */
+.tabrow {
+	position: relative;
+	z-index:2;
+	
+    float: left;
+    width: 1024px;
+	
+    margin-bottom: -5px;
+    height: 48px;	
+    background: url(../images/top/topMenu.png) center no-repeat;
+    background-color: #381014;
+	
+	
+	
+    /*flex*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.tab {
+    float: left;
+    width: 50px;
+    height: 49px;
+    margin-left: 1px;
+    margin-right: 0px;
+    margin-top: 10px;
+}
+
+/* Основной контент */
+.content {
+	position: relative;
+	z-index:1;	
+    
+	margin-left: 5px;
+    float: left;
+    width: 1024px;
+    background-image: url(../images/content/Parchment_Pattern.png);
+    border-radius: 2px;	    
+	/* Рамки */	
+	border: 2px solid white;    
+	border-image: url(../images/top/border.png) 4 stretch stretch;
+}
+
+
+/* Меню */
+.menu {
+    padding-top: 20px; 	
+	padding-left: 0px;
+    background-color: #381014;
+    float: left;
+    width: 253px;
+    /* scroll bar */
+    overflow-y: auto;
+    height: 670px;
+    
+    /*flex*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+    flex-flow: row wrap;
+}
+/* Убрать подчеркивание ссылок */
+.menugroupcontainer a {
+    text-decoration: none;
+}
+
+.menugroupcontainer {
+    float: left;
+    width: 220px;
+	margin-left: 5px;
+	padding-right: -5px;
+}
+/* Группа меню*/
+/*________________________________________________________________________*/
+.menugroup {
+    padding-left: 17px;	
+    padding-top: 6px;
+    margin-left: 0x;
+    margin-right: 1px;
+    height: 35px;
+    line-height: 26px;
+    vertical-align: left;
+    background-image: url('../images/menuitem/menugroupOpen.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: left;
+    color: #a69f91;
+    text-shadow: #232217 0 0 10px; /* свечение текста */
+	
+	cursor: pointer;
+	 border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+/*Если на элемент нажали */
+.active {
+    background-image: url('../images/menuitem/menugroupOpen.png');
+}
+
+.panel {   
+    overflow: hidden;
+}
+/*________________________________________________________________________*/
+
+.menuitem {
+    padding-left: 17px;	
+    padding-top: 6px;
+    margin-left: 0x;
+    margin-right: 1px;
+    height: 35px;
+    line-height: 26px;
+    vertical-align: left;
+    background-image: url('../images/menuitem/menuitem.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    text-align: left;
+    color: #a69f91;
+    text-shadow: #232217 0 0 10px; /* свечение текста */
+}
+
+
+.title {
+    margin-left: -20px;
+    width: 464px;
+    height: 36px;
+    font-size: 17px;
+    text-align: center;
+    padding-top: 7px;
+    text-shadow: #92B3B6 0em 0em 0.2em, #92B3B6 0em 0em 0.2em, #92B3B6 0em 0em 0.2em, #92B3B6 0em 0em 0.2em;
+}
+
+/* Большой блок контента справа */
+.contentright {
+    font-family: CIV6, Verdana;
+    margin-top: 20px;
+    float: right;   
+    margin-right: 6px;
+}
+
+.contentwide {
+    float: right;
+    width: 750px; 
+	
+	/* scroll bar */
+    overflow-y: auto;
+    height: 650px;    	
+}
+.contentHeader {
+	margin-top: -20px;	
+	margin-left: -18px;	
+	width: 105%;
+	height: 60px;
+	
+    background: url('../images/content/ContentHeader.png') no-repeat center; 	
+	background-size: 100%;
+	
+	/*Текст */		
+	font: url(../fonts/MinionPro-Semibold.otf);
+	font-size: 20pt;	
+	color: rgba(58, 56, 56, 0.9);
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 1px;
+}
+.contentTable{
+	margin-left: 10px;
+	width:99.99%;
+	text-align:center;
+	
+}
+#l_td{
+	text-align: left;
+	color: rgba(58, 56, 56, 0.8);
+}
+#r_td {
+vertical-align:top;
+}
+
+.contentSubheader{
+	padding-top: 11px;
+	background: url('../images/content/ContentSubheader.png') no-repeat; 	
+	height: 30px;
+	background-size: 150%, cover; 
+	
+	/*Текст */		
+	font: url(../fonts/MinionPro-Semibold.otf);
+	font-size: 14pt;	
+	color: rgba(58, 56, 56, 0.6);
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 0.5px;
+}
+
+/* Коробка */
+.t {
+    background: url('../images/content/t.png') 0 0 repeat-x rgba(0, 0, 0, 0);	
+    }
+.b {
+    background: url('../images/content/b.png') 0 100% repeat-x
+}
+
+.l {
+    background: url('../images/content/l.png') 0 0 repeat-y;
+	
+}
+
+.r {
+    background: url('../images/content/r.png') 100% 0 repeat-y
+}
+
+.lb {
+    background: url('../images/content/lb.png') 0 100% no-repeat;
+}
+
+.rb {
+    background: url('../images/content/rb.png') 100% 100% no-repeat
+}
+
+.lt {
+    background: url('../images/content/lt.png') 0 0 no-repeat;
+	
+}
+.rt {
+    background: url('../images/content/rt.png') 100% 0 no-repeat;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 22px
+}
+
+/* Нижний уровень */
+.borderbottom {
+    font-size: 17px;
+    width: 100%;
+    float: left;
+    height: 54px;
+    text-align: center;
+    background-repeat: no-repeat;
+}
+
+.footer {
+    float: left;
+    width: 1024px;
+    text-align: center;
+    font-size: 10px;	
+}
+
