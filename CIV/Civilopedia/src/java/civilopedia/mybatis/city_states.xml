@@ -1,3 +1,6 @@
+<!--
+ @author Басков Марат
+--> 
 <?xml version="1.0" encoding="UTF-8" ?>  
 <!DOCTYPE mapper 
    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
@@ -16,7 +19,7 @@
     </resultMap> 
 
     <select id = "selectAll" resultMap = "result"> 
-       SELECT * FROM user;  
+       SELECT * FROM city_states;  
     </select> 
 
     <select id = "selectById" parameterType = "int" resultMap = "result"> 
