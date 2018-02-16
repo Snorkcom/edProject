@@ -38,9 +38,9 @@
     <update id = "update" parameterType = "civilopedia.model.City_states"> 
        UPDATE city_states SET 
             NAME = #{NAME}, 
-            UNIQUE_ABILITY = #{UNIQUE_ABILITY}, 
-			HISTORICAL_CONTEXT = #{HISTORICAL_CONTEXT},
-			IMAGE = #{IMAGE},
+            UNIQUE_ABILITY = #{UNIQUE_ABILITY} 
+			HISTORICAL_CONTEXT = #{HISTORICAL_CONTEXT} 
+			IMAGE = #{IMAGE} 
 			TYPE = #{TYPE} 
             WHERE ID = #{ID}; 
     </update> 
