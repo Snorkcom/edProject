@@ -119,6 +119,6 @@ public class City_states
     @Override
     public String toString() {
         return "City_states{" + "ID= " + ID + ", NAME= " + NAME + ", UNIQUE_ABILITY= " + UNIQUE_ABILITY + 
-                ", HISTORICAL_CONTEXT= " + HISTORICAL_CONTEXT +", IMAGE= " + IMAGE +", TYPE= " + TYPE +'}';
+                ", HISTORICAL_CONTEXT= " + HISTORICAL_CONTEXT +", IMAGE= " + IMAGE +", TYPE= " + TYPE +"}";
     }
 }

@@ -9,12 +9,12 @@
 <mapper namespace="city_states">
     
     <resultMap id = "result" type = "civilopedia.model.City_states"> 
-       <result property = "ID" column = "ID"/> 
-       <result property = "NAME" column = "NAME"/> 
-       <result property = "UNIQUE_ABILITY" column = "UNIQUE_ABILITY"/>
-	   <result property = "HISTORICAL_CONTEXT" column = "HISTORICAL_CONTEXT"/>
-	   <result property = "IMAGE" column = "IMAGE"/>
-	   <result property = "TYPE" column = "TYPE"/>
+        <result property = "ID" column = "ID"/> 
+        <result property = "NAME" column = "NAME"/> 
+        <result property = "UNIQUE_ABILITY" column = "UNIQUE_ABILITY"/>
+        <result property = "HISTORICAL_CONTEXT" column = "HISTORICAL_CONTEXT"/>
+        <result property = "IMAGE" column = "IMAGE"/>
+	<result property = "TYPE" column = "TYPE"/>
 	   
     </resultMap> 
 
@@ -39,9 +39,9 @@
        UPDATE city_states SET 
             NAME = #{NAME}, 
             UNIQUE_ABILITY = #{UNIQUE_ABILITY},
-			HISTORICAL_CONTEXT = #{HISTORICAL_CONTEXT}, 
-			IMAGE = #{IMAGE},
-			TYPE = #{TYPE} 
+            HISTORICAL_CONTEXT = #{HISTORICAL_CONTEXT},
+            IMAGE = #{IMAGE},
+            TYPE = #{TYPE} 
             WHERE ID = #{ID}; 
     </update> 
 </mapper>

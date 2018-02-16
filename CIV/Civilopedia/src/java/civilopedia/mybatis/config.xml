@@ -16,7 +16,9 @@
     </environment> 
   </environments> 
   <mappers> 
-    <mapper resource="civilopedia/mybatis/city_states.xml"/> 
+    <mapper resource="civilopedia/mybatis/city_states.xml"/>
+    <mapper resource="civilopedia/mybatis/introduction.xml"/> 
+    <mapper resource="civilopedia/mybatis/districts.xml"/>    
   </mappers> 
 </configuration>
 

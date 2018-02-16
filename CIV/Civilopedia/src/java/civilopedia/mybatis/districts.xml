@@ -1,0 +1,51 @@
+<!--
+ @author Anna
+--> 
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper 
+   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+    
+<mapper namespace="districts">
+    
+    <resultMap id = "result" type = "civilopedia.model.Districts"> 
+       <result property = "ID" column = "ID"/> 
+       <result property = "NAME" column = "NAME"/> 
+       <result property = "DESCRIPTION" column = "DESCRIPTION"/>
+	   <result property = "HISTORICAL_CONTEXT" column = "HISTORICAL_CONTEXT"/>
+	   <result property = "IMAGE" column = "IMAGE"/>
+	   <result property = "FEATURES" column = "FEATURES"/>
+	   <result property = "FEATURES" column = "FEATURES"/>
+	   <result property = "REQUIREMENTS" column = "REQUIREMENTS"/>
+	   <result property = "USING" column = "USING"/>
+    </resultMap> 
+
+    <select id = "selectAll" resultMap = "result"> 
+       SELECT * FROM districts;  
+    </select> 
+
+    <select id = "selectById" parameterType = "int" resultMap = "result"> 
+       SELECT * FROM districts WHERE ID = #{ID};
+    </select> 
+ 
+    <delete id = "deleteById" parameterType = "int"> 
+      DELETE FROM districts WHERE ID = #{ID}; 
+   </delete>
+
+    <insert id = "insert" parameterType = "civilopedia.model.Districts"> 
+       INSERT INTO districts (NAME, DESCRIPTION, HISTORICAL_CONTEXT, IMAGE, FEATURES, REQUIREMENTS, USING)
+		VALUES (#{NAME}, #{DESCRIPTION}, #{HISTORICAL_CONTEXT}, #{IMAGE}, #{FEATURES}, #{REQUIREMENTS}, #{USING});     
+    </insert>
+
+    <update id = "update" parameterType = "civilopedia.model.Districts"> 
+       UPDATE districts SET 
+            NAME = #{NAME}, 
+            DESCRIPTION = #{DESCRIPTION},
+			HISTORICAL_CONTEXT = #{HISTORICAL_CONTEXT},
+			IMAGE = #{IMAGE},
+			FEATURES = #{FEATURES},
+			REQUIREMENTS = #{REQUIREMENTS},
+			USING = #{USING}			
+            WHERE ID = #{ID}; 
+    </update> 
+</mapper>
