@@ -1,0 +1,40 @@
+<!--
+ @author Валерия Чайкина
+--> 
+
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper 
+   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+    
+<mapper namespace="introduction">
+    
+    <resultMap id = "result" type = "civilopedia.model.Introduction"> 
+       <result property = "ID" column = "ID"/> 
+       <result property = "INTR_NAME" column = "INTR_NAME"/> 
+       <result property = "INTR_TEXT" column = "INTR_TEXT"/>   
+    </resultMap> 
+
+    <select id = "selectAll" resultMap = "result"> 
+       SELECT * FROM introduction;  
+    </select> 
+
+    <select id = "selectById" parameterType = "int" resultMap = "result"> 
+       SELECT * FROM introduction WHERE ID = #{ID};
+    </select> 
+ 
+    <delete id = "deleteById" parameterType = "int"> 
+      DELETE FROM introduction WHERE ID = #{ID}; 
+   </delete>
+
+    <insert id = "insert" parameterType = "civilopedia.model.Introduction"> 
+       INSERT INTO introduction (INTR_NAME, INTR_TEXT) VALUES (#{INTR_NAME}, #{INTR_TEXT});     
+    </insert>
+
+    <update id = "update" parameterType = "civilopedia.model.Introduction"> 
+       UPDATE introduction SET 
+            INTR_NAME = #{INTR_NAME}, 
+            INTR_TEXT = #{INTR_TEXT} 
+			WHERE ID = #{ID}; 
+    </update> 
+</mapper>
