@@ -1,3 +1,8 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package civilopedia.dal;
 
 import java.io.IOException;
@@ -23,14 +28,12 @@ public class BaseDal
         {
             reader = Resources.getResourceAsReader("civilopedia/mybatis/config.xml");
             sqlSessionFactory = new SqlSessionFactoryBuilder().build(reader);
-            System.out.println("Connected BaseDal");
+            System.out.println("Connected to the database");
         } 
         catch (IOException ex) 
         {
             Logger.getLogger(BaseDal.class.getName()).log(Level.SEVERE, null, ex);
         } 
-    }
-    
-    
+    }      
     
 }
