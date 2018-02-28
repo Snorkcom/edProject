@@ -1,27 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package civilopedia.api;
 
-import civilopedia.controllers.City_statesController;
-import civilopedia.model.City_states;
+
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import mappers.JsonCity_statesMapper;
+
+import civilopedia.model.Districts;
+import mappers.JsonDistrictsMapper;
+import civilopedia.controllers.DistrictsController;
 
 /**
  *
- * @author Басков Марат
+ * @author Anna
  */
-@WebServlet(name = "GetCity_statesById", urlPatterns = {"/GetCity_statesById"})
-public class GetCity_statesById extends HttpServlet {
+@WebServlet(name = "GetAllDistricts", urlPatterns = {"GetAllDistricts"})
+public class GetAllDistricts extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,14 +32,13 @@ public class GetCity_statesById extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       response.setContentType("text/html;charset=UTF-8");
-         int id = Integer.parseInt(request.getParameter("id"));
-        
-        try (PrintWriter out = response.getWriter()) {           
-           City_statesController city_statesController=new City_statesController();
-           City_states city_state= city_statesController.getCity_states(id);
-           String json=JsonCity_statesMapper.toJson(city_state);
-           out.println(json);           
+        response.setContentType("text/html;charset=UTF-8");
+        try (PrintWriter out = response.getWriter())          
+        {           
+           DistrictsController districtsController = new DistrictsController();           
+           List<Districts> districts = districtsController.getAllDistricts();
+           String json=JsonDistrictsMapper.toJson(districts);
+           out.println(json);
         }
     }
 

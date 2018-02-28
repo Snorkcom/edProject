@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Фев 26 2018 г., 18:30
+-- Время создания: Фев 28 2018 г., 18:24
 -- Версия сервера: 5.5.25
 -- Версия PHP: 5.2.12
 
@@ -81,9 +81,18 @@ CREATE TABLE IF NOT EXISTS `districts` (
   `IMAGE` text NOT NULL,
   `FEATURES` text NOT NULL,
   `REQUIREMENTS` text NOT NULL,
-  `USING` text NOT NULL,
+  `UTILITY` text NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- Дамп данных таблицы `districts`
+--
+
+INSERT INTO `districts` (`ID`, `NAME`, `DESCRIPTION`, `HISTORICAL_CONTEXT`, `IMAGE`, `FEATURES`, `REQUIREMENTS`, `UTILITY`) VALUES
+(1, 'NAME1', 'DESCRIPTION1', 'HISTORICAL_CONTEXT1', 'IMAGE1', 'FEATURES1', 'REQUIREMENTS1', 'UTILITY1'),
+(2, 'NAME2', 'DESCRIPTION2', 'HISTORICAL_CONTEXT2', 'IMAGE2', 'FEATURES2', 'REQUIREMENTS2', 'UTILITY2'),
+(3, 'NAME3', 'DESCRIPTION3', 'HISTORICAL_CONTEXT3', 'IMAGE3', 'FEATURES3', 'REQUIREMENTS3', 'UTILITY3');
 
 -- --------------------------------------------------------
 

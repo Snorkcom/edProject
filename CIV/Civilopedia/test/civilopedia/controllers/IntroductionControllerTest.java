@@ -41,7 +41,7 @@ public class IntroductionControllerTest {
     
     // Тест InsertIntroduction, UpdateIntroduction, DeleteIntroduction
    @Test
-    public void testInsertIntroduction() {  
+    public void testInsertUpdateDeleteIntroduction() {  
         
         IntroductionController instance = new IntroductionController();
         // Создание объекта класса Introduction для ввода в таблицу

@@ -20,14 +20,14 @@ public class Districts
     private String IMAGE;
     private String FEATURES;
     private String REQUIREMENTS;
-    private String USING;
+    private String UTILITY;
 
     public Districts() {
     }
 
     public Districts( int id,                     String name,        String description, 
                       String historical_context,  String image,       String features, 
-                      String requirements,        String using)
+                      String requirements,        String utility)
     {
         this.ID = id;
         this.NAME = name;
@@ -36,7 +36,7 @@ public class Districts
         this.IMAGE = image;
         this.FEATURES = features;
         this.REQUIREMENTS = requirements;
-        this.USING = using;        
+        this.UTILITY = utility;        
     }
  
     /* getters */
@@ -61,8 +61,8 @@ public class Districts
    public String getREQUIREMENTS() {
         return REQUIREMENTS;
     }
-   public String getUSING() {
-        return USING;
+   public String getUTILITY() {
+        return UTILITY;
     }
    
     /* setters */
@@ -87,8 +87,8 @@ public class Districts
    public void setREQUIREMENTS(String requirements) {
         this.REQUIREMENTS = requirements;
     }
-   public void setUSING(String using) {
-        this.USING = using;
+   public void setUTILITY(String utility) {
+        this.UTILITY = utility;
     }
    
     /* Переопределение hashCode и equals toString */
@@ -102,7 +102,7 @@ public class Districts
         hash = 8 * hash + Objects.hashCode(this.IMAGE);
         hash = 8 * hash + Objects.hashCode(this.FEATURES);
         hash = 8 * hash + Objects.hashCode(this.REQUIREMENTS);
-        hash = 8 * hash + Objects.hashCode(this.USING);
+        hash = 8 * hash + Objects.hashCode(this.UTILITY);
         return hash;
     }
 
@@ -140,7 +140,7 @@ public class Districts
         if (!Objects.equals(this.REQUIREMENTS, other.REQUIREMENTS)) {
             return false;
         }
-        if (!Objects.equals(this.USING, other.USING)) {
+        if (!Objects.equals(this.UTILITY, other.UTILITY)) {
             return false;
         }
         
@@ -151,7 +151,7 @@ public class Districts
     public String toString() {
         return "Districts{" + "ID= " + ID + ", NAME= " + NAME + ", DESCRIPTION= " + DESCRIPTION + 
                 ", HISTORICAL_CONTEXT= " + HISTORICAL_CONTEXT +", IMAGE= " + IMAGE +
-                ", FEATURES= " + FEATURES +", REQUIREMENTS= " + REQUIREMENTS +", USING= " + USING +"}";
+                ", FEATURES= " + FEATURES +", REQUIREMENTS= " + REQUIREMENTS +", UTILITY= " + UTILITY +"}";
     }
 }
 

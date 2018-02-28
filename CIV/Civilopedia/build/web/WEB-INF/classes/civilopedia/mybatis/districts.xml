@@ -12,9 +12,8 @@
         <result property = "HISTORICAL_CONTEXT" column = "HISTORICAL_CONTEXT"/>
 	<result property = "IMAGE" column = "IMAGE"/>
 	<result property = "FEATURES" column = "FEATURES"/>
-	<result property = "FEATURES" column = "FEATURES"/>
 	<result property = "REQUIREMENTS" column = "REQUIREMENTS"/>
-	<result property = "USING" column = "USING"/>
+	<result property = "UTILITY" column = "UTILITY"/>
     </resultMap> 
 
     <select id = "selectAll" resultMap = "result"> 
@@ -29,9 +28,9 @@
       DELETE FROM districts WHERE ID = #{ID}; 
    </delete>
 
-    <insert id = "insert" parameterType = "civilopedia.model.Districts"> 
-       INSERT INTO districts (NAME, DESCRIPTION, HISTORICAL_CONTEXT, IMAGE, FEATURES, REQUIREMENTS, USING)
-		VALUES (#{NAME}, #{DESCRIPTION}, #{HISTORICAL_CONTEXT}, #{IMAGE}, #{FEATURES}, #{REQUIREMENTS}, #{USING});     
+
+   <insert id = "insert" parameterType = "civilopedia.model.Districts">  
+       INSERT INTO districts (NAME, DESCRIPTION, HISTORICAL_CONTEXT, IMAGE, FEATURES, REQUIREMENTS, UTILITY) VALUES (#{NAME}, #{DESCRIPTION}, #{HISTORICAL_CONTEXT}, #{IMAGE}, #{FEATURES}, #{REQUIREMENTS}, #{UTILITY});     
     </insert>
 
     <update id = "update" parameterType = "civilopedia.model.Districts"> 
@@ -42,7 +41,7 @@
 	IMAGE = #{IMAGE},
 	FEATURES = #{FEATURES},
 	REQUIREMENTS = #{REQUIREMENTS},
-	USING = #{USING}			
+	UTILITY = #{UTILITY}			
        WHERE ID = #{ID}; 
     </update> 
 </mapper>

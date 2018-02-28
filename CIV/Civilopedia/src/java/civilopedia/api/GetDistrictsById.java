@@ -5,8 +5,7 @@
  */
 package civilopedia.api;
 
-import civilopedia.controllers.City_statesController;
-import civilopedia.model.City_states;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -14,14 +13,17 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import mappers.JsonCity_statesMapper;
+
+import mappers.JsonDistrictsMapper;
+import civilopedia.controllers.DistrictsController;
+import civilopedia.model.Districts;
 
 /**
  *
- * @author Басков Марат
+ * @author Anna
  */
-@WebServlet(name = "GetCity_statesById", urlPatterns = {"/GetCity_statesById"})
-public class GetCity_statesById extends HttpServlet {
+@WebServlet(name = "GetDistrictsById", urlPatterns = {"/GetDistrictsById"})
+public class GetDistrictsById extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,9 +40,9 @@ public class GetCity_statesById extends HttpServlet {
          int id = Integer.parseInt(request.getParameter("id"));
         
         try (PrintWriter out = response.getWriter()) {           
-           City_statesController city_statesController=new City_statesController();
-           City_states city_state= city_statesController.getCity_states(id);
-           String json=JsonCity_statesMapper.toJson(city_state);
+           DistrictsController districtsController=new DistrictsController();
+           Districts districts= districtsController.getDistricts(id);
+           String json=JsonDistrictsMapper.toJson(districts);
            out.println(json);           
         }
     }
