@@ -18,7 +18,7 @@ import civilopedia.controllers.DistrictsController;
  *
  * @author Anna
  */
-@WebServlet(name = "GetAllDistricts", urlPatterns = {"GetAllDistricts"})
+@WebServlet(name = "GetAllDistricts", urlPatterns = {"/GetAllDistricts"})
 public class GetAllDistricts extends HttpServlet {
 
     /**
