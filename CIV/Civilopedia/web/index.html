@@ -16,6 +16,8 @@
 
         <script src="service/City_statesService.js"></script>  
         <script src="controllers/City_statesController.js"></script>
+        <script src="service/IntroductionService.js"></script>  
+        <script src="controllers/IntroductionController.js"></script>
 
     </head>
 
@@ -56,9 +58,9 @@
                         <div class="menuitem">Введение</div>				
 
                         <div  class="menugroup">Военные города</div>
-                        
-                        <div id="city_states" class="panel" style="display: block;">				
 
+                        <div id="city_states" class="panel" style="display: block;">			
+                            <!-- место для пунктов меню -->
                         </div>		
 
                     </div>
@@ -76,21 +78,14 @@
                                             <div class="rb">
                                                 <div class="lt">
                                                     <div class="rt">
-                                                        
-													
-														
+
+
                                                         <div id="contentFromDB">
 
-                                                            <?php
-                                                            require_once "./StartPage_files/php/selectForStartPage.php";
-                                                            $product = select('introduction','Города-государства');
-                                                            echo $product['INTR_TEXT'];
-                                                            ?>
+
 
                                                         </div>	
-														
-														
-														
+
 
                                                     </div>
                                                 </div>
@@ -103,14 +98,10 @@
 
                     </div>
                 </div>
-
             </div>
 
 
             <div class="borderbottom">&nbsp;</div>
-
-
-
 
             <div class="footer">
                 <p>The artwork and designs contained on this site were not created by the site owner. All artwork and designs were done by <a href="https://www.civilization.com/" target="_blank">Firaxis</a> and have been exported from their game <a href="https://www.civilization.com/" target="_blank">Civilization 6</a>. The site owner does not hold any rights on the art or designs. All content was generated using the game's XML data files.</p>
@@ -123,18 +114,16 @@
             <script src="./StartPage_files/js/tooltip.js"></script>
             <script src="./StartPage_files/js/menugroupAccordionToogle.js"></script>
             <script src="./StartPage_files/js/mouseEventMenugroupEvent.js"></script>
+            
             <script>
                 $(window).ready(function () {
-
-                    var controller = new City_statesController();
-                    controller.getAllCity_states();
-
+                    var controller = new IntroductionController();
+                    controller.getIntroductionById(3);                
                 });
             </script>
 
 
 
         </div>
-
     </body>
 </html>
