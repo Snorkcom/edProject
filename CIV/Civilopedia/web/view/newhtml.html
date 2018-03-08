@@ -1,0 +1,45 @@
+<div id="contentFromDB">
+
+    <?php
+    require_once "./StartPage_files/php/selectForStartPage.php";
+    $product = select('introduction','Понятия');
+    echo $product['INTR_TEXT'];
+    ?>
+
+</div>
+
+
+
+
+
+
+<div id="header" class="contentHeader">  </div>
+<br>	
+
+<table class="contentTable" border="0" cellpadding="0" cellspacing="0" align="center">
+    <tr>
+        <td id="l_td" width="380">
+            <div class="contentSubheader"> Уникальная способность </div>
+            <p id="unique_ABILITY" style="margin-top:4px;">  </p> <br>
+
+            <div class="contentSubheader"> Историческое описание </div>
+            <p id="historical_CONTEXT" style="margin-top:4px;">  </p> <br>
+
+
+        </td>
+        <td id="r_td">
+            <img src="./StartPage_files/images/content/1.png" alt="альтернативный текст">														
+        </td>
+    </tr>
+</table>
+
+
+<script>
+    $(window).ready(function () {
+
+        var controller = new City_statesController();
+        controller.getAllCity_states();
+
+    });
+</script>
+
