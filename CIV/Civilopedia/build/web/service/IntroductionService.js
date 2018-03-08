@@ -5,7 +5,7 @@ class IntroductionService
         // запрос к серверу GetAllIntroduction
 
         var request = new XMLHttpRequest();
-        request.open('GET', 'GetAllIntroduction', false);
+        request.open('GET', '/Civilopedia/GetAllIntroduction', false);
         request.send();        
         
         if (request.status == 200)

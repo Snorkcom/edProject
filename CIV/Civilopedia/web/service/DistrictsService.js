@@ -1,17 +1,17 @@
-class City_statesService
+class DistrictsService
 {
-    getAllCity_statesService() {
+    getAllDistrictsService() {
 
-        // запрос к серверу GetAllCity_states
+        // запрос к серверу GetAllDistricts
 
         var request = new XMLHttpRequest();
-        request.open('GET', '/Civilopedia/GetAllCity_states', false);
+        request.open('GET', '/Civilopedia/GetAllDistricts', false);
         request.send();        
         
         if (request.status == 200)
         {
-            var city_states = JSON.parse(request.responseText);            
-            return city_states;
+            var districts = JSON.parse(request.responseText);            
+            return districts;
             
         } else
         {
@@ -20,12 +20,12 @@ class City_statesService
         }
     }
 
-    getCity_statesById(id) {
+    GetDistrictByIdService(id) {
         
-        // запрос к серверу GetCity_statesById?id=*
+        // запрос к серверу GetDistrictById?id=*
         
         var request = new XMLHttpRequest();
-        request.open('GET', '/Civilopedia/GetCity_statesById?id=' + id, false);
+        request.open('GET', '/Civilopedia/GetDistrictsById?id=' + id, false);
         request.send();        
        
         if (request.status != 200)
@@ -34,10 +34,11 @@ class City_statesService
             return null;
         } else
         {            
-            var city_state = JSON.parse(request.responseText);             
-            return city_state;
+            var district = JSON.parse(request.responseText);             
+            return district;
         }
     }
 
 }
+
 

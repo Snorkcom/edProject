@@ -5,7 +5,7 @@ class City_statesService
         // запрос к серверу GetAllCity_states
 
         var request = new XMLHttpRequest();
-        request.open('GET', 'GetAllCity_states', false);
+        request.open('GET', '/Civilopedia/GetAllCity_states', false);
         request.send();        
         
         if (request.status == 200)
