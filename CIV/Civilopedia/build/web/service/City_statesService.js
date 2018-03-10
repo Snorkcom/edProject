@@ -1,5 +1,6 @@
 class City_statesService
 {
+    
     getAllCity_statesService() {
 
         // запрос к серверу GetAllCity_states
@@ -20,7 +21,7 @@ class City_statesService
         }
     }
 
-    getCity_statesById(id) {
+    getCity_stateByIdService(id) {
         
         // запрос к серверу GetCity_statesById?id=*
         

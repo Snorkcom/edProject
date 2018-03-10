@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html" charset="utf-8">
+        <TITLE>Города-государства | CIVILOPEDIA VI</TITLE>
+        <META NAME="keywords" content="civilopedia,civilopedia online,civilization, civilization 6,civilization VI, civilization6, цивилопедия, цивилопедия 6, цивилопедия6">
+        <META NAME="description" CONTENT="Перенос энциклопедии из игры CIVILIZATION VI. Цивилопедия 6 представляет собой подробное описание всех аспектов игры.">
+
+
+        <!-- CSS  -->
+        <link rel="stylesheet" type="text/css" href="./StartPage_files/css/styles.css">
+        <link rel="stylesheet" type="text/css" href="./StartPage_files/css/jquery.mCustomScrollbar.css" />
+        <!-- Библиотеки Jquery и CustomScrollbar -->   
+        <script type="text/javascript" src="./StartPage_files/js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="./StartPage_files/js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+        <!-- Скрипты для сервера -->
+            <!-- Districts -->
+        <script src="service/DistrictsService.js"></script>  
+        <script src="controllers/DistrictsController.js"></script>        
+            <!-- Introduction -->
+        <script src="service/IntroductionService.js"></script>  
+        <script src="controllers/IntroductionController.js"></script>
+
+    </head>
+
+    <body>
+        <div class="CenterDiv">
+
+            <div class="topContainer" style="z-index: 2;  position: relative;">
+
+                <div class="header"><a href="" class="titlelink">CIVILOPEDIA VI</a></div>
+                
+                <!-- Меню сверху -->
+                <div class="tabrow">
+                    <a href="">                                         <img src="./StartPage_files/images/tabrow/01.1.png" class="tab"   			title="Понятия">  </a>
+                    <a href="">                                         <img src="./StartPage_files/images/tabrow/02.1.png" class="tab"				title="Основные цивилизации"></a>
+                    <a href="">                                         <img src="./StartPage_files/images/tabrow/03.1.png" class="tab"				title="Лидеры">            	</a>
+                    <a href="/Civilopedia/index.html">                  <img src="./StartPage_files/images/tabrow/04.2.png" class="tab"                         title="Города-государства"></a>
+                    <a href="/Civilopedia/districts.html">              <img src="./StartPage_files/images/tabrow/05.1.png" class="tab"         id="now"	title="Районы">            </a>
+                    <a href="">                                         <img src="./StartPage_files/images/tabrow/06.1.png" class="tab"				title="Здания">            </a>
+                    <a href="">             <img src="./StartPage_files/images/tabrow/07.1.png" class="tab"				title="Чудеса и проекты">            </a>
+                    <a href="">             <img src="./StartPage_files/images/tabrow/08.1.png" class="tab"				title="Юниты">            </a>
+                    <a href="">             <img src="./StartPage_files/images/tabrow/09.1.png" class="tab"				title="Повышение юнитов">            </a>
+                    <a href="">             <img src="./StartPage_files/images/tabrow/10.1.png" class="tab"				title="Великие люди">            </a>
+                    <a href="">             <img src="./StartPage_files/images/tabrow/11.1.png" class="tab"				title="Технологии">            </a>
+                    <a href="">             <img src="./StartPage_files/images/tabrow/12.1.png" class="tab"				title="Социальные институты">            </a>
+                    <a href="">             <img src="./StartPage_files/images/tabrow/13.1.png" class="tab"				title="Правительства и политические курсы">            </a>
+                    <a href="">             <img src="./StartPage_files/images/tabrow/14.1.png" class="tab"				title="Религии">            </a>
+                    <a href="">             <img src="./StartPage_files/images/tabrow/15.1.png" class="tab"				title="Ландшафты и их характеристики">            </a>
+                    <a href="">             <img src="./StartPage_files/images/tabrow/16.1.png" class="tab"				title="Ресурсы">            </a>
+                    <a href="">             <img src="./StartPage_files/images/tabrow/17.1.png" class="tab"				title="Улучшения и маршруты">            </a>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <div class="menu" class="mCustomScrollbarMy" data-mcs-theme="inset-2">
+
+                    <!-- Меню слева -->
+                    <div id="districts" class="menugroupcontainer">
+                        
+                        <a href=""><div class="menuitem  introduction">Введение</div></a>
+                        
+                        
+                    </div>
+
+                </div>
+
+                <div class="contentright">
+                    <div class="contentwide mCustomScrollbar" data-mcs-theme="inset-2-dark">
+
+                        <div class="l">
+                            <div class="r">
+                                <div class="t">
+                                    <div class="b">
+                                        <div class="lb">
+                                            <div class="rb">
+                                                <div class="lt">
+                                                    <div class="rt">
+
+                                                        <!-- Основной контент -->
+                                                        <div id="contentFromDB">
+
+
+
+                                                        </div>	
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="borderbottom">&nbsp;</div>
+
+            <div class="footer">
+                <p>The text, artwork and designs contained on this site were not created by the site owner. All artwork and designs were done by <a href="https://www.civilization.com/" target="_blank">Firaxis</a> and have been exported from their game <a href="https://www.civilization.com/" target="_blank">Civilization 6</a>. The site owner does not hold any rights on the art or designs. All content was generated using the game's XML data files.</p>
+            </div>
+
+            <!-- Скрипты подсказок-->
+            <script src="./StartPage_files/js/tippy.all.min.js"></script>
+            <script src="./StartPage_files/js/tooltip.js"></script>
+            <!-- Скрипт скроллбаров-->
+            <script src="./StartPage_files/js/scrollbar.js"></script>            
+            <!-- Скрипты при наведении мыши -->
+            <script src="./StartPage_files/js/mouseEventTabrow.js"></script>
+            <script src="./StartPage_files/js/mouseEventMenuItem.js"></script>
+            <script src="./StartPage_files/js/mouseEventMenugroupEvent.js"></script>
+            <!-- Скрипты при клике мыши -->
+            <script src="./StartPage_files/js/menugroupAccordionToogle.js"></script>
+            <script src="./StartPage_files/js/menuitemClickDistricts.js"></script>
+
+
+            <script>
+                $(window).ready(function () {
+                    var controller = new IntroductionController();
+                    controller.getIntroductionById(5);
+
+                    var controller = new DistrictsController();
+                    controller.getAllDistricts();   
+                    
+                    menuitemAnimation();
+                    menuitemClick();
+                });               
+            </script>
+           
+        </div>
+    </body>
+</html>

@@ -1,4 +1,6 @@
-﻿$(".tab").on("mouseover", function() {	
+﻿// Скрипт меняет картинку при наведении на верхние круговые меню
+
+$(".tab").on("mouseover", function() {	
 		var str = $(this).attr("src");
 		var number =  str[str.length - 8] + str[str.length - 7];
 		str = "./StartPage_files/images/tabrow/"+number+".2.png";	

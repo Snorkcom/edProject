@@ -1,24 +1,23 @@
-﻿
-$('.menuitem').click(function(){
+﻿function menuitemClick() {
 	
-	
-	var NAME = $(this).text();    
-	var TABLE = table;
-	
-	
-	$('.menuitem').removeAttr("id");
-	$(this).attr('id', 'now');
-	$('.menuitem').css('background-image', 'url(\'./StartPage_files/images/menuitem/menuitem.png\')');	
-	this.style = "background-image: url('./StartPage_files/images/menuitem/menuitem_light.png');";
-	
-	
-	
-	$.ajax({
-		type: "POST",
-		url: "./StartPage_files/php/Select.php",
-		data: {fname:NAME, ftable:TABLE}}).done(function( result )
-		{
-			$("#contentFromDB").html(result);
-		});
+	$('.menuitem:not(.introduction)').click(function(){
 		
-});
+		// Получаем data-id у менюитема
+		var id = $(this).data("id");  
+		
+		$('.menuitem').removeAttr("id"); //убрать у всех менюитемов id
+		$(this).attr('id', 'now'); // добавить id для выбранного менюитема
+		//поменять его картинки	
+		$('.menuitem').css('background-image', 'url(\'./StartPage_files/images/menuitem/menuitem.png\')'); 
+		this.style = "background-image: url('./StartPage_files/images/menuitem/menuitem_light.png');";
+		
+		if($(this).hasClass("introduction")){
+			return;
+		}
+		// Добавление текста в "contentFromDB"
+		var controller = new City_statesController();
+		controller.getCity_stateById(id);
+		
+	});
+	
+}

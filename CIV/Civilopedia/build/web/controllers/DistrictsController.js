@@ -12,37 +12,67 @@ class DistrictsController {
     }
 
     // VIEW
+    getDistrictById(id) {
+
+        var data = this.getDistrictByIdController(id);
+
+        var res = "";
+
+
+        var ID = data.id;
+        var NAME = data.name;
+        var DESCRIPTION = data.description;
+        var HISTORICAL_CONTEXT = data.historical_CONTEXT;
+        var IMAGE = data.image;
+        var FEATURES = data.features;
+        var REQUIREMENTS = data.requirements;
+        var UTILITY = data.utility;
+
+        res += "<div class='contentHeader'> <br>" + NAME + "</div>" +
+                "<br>" +
+                "<table class='contentTable' border='0' cellpadding='0' cellspacing='0' align='center'>" +
+                "<tr>" +
+                "<td id='l_td' width='380'>" +
+                "<div class='contentSubheader'> Описание </div>" +
+                "<p style='margin-top:4px;'>" + DESCRIPTION + "</p>" +
+                "<br><br>" +
+                "<div class='contentSubheader'> Исторический контекст </div>" +
+                "<p style='margin-top:4px;'>" + HISTORICAL_CONTEXT + "</p>" +
+                "</td>" +
+                "<td id=\"r_td\">" + IMAGE +
+                "<br><br>" +
+                FEATURES +
+                "<br><br>" +
+                REQUIREMENTS +
+                "<br><br>" +
+                UTILITY +
+                "</td>" +
+                "</tr>" +
+                "</table>";
+
+
+        // innerHTML
+        var element = document.getElementById("contentFromDB");
+        element.innerHTML = res;
+
+    }
+
     getAllDistricts() {
-       
-        var data = this.getAllDistrictsController();        
-        
-        var res = "";        
-      
+        var data = this.getAllDistrictsController();
+
+        var res = "<a href=''><div class='menuitem  introduction'>Введение</div></a>";
+
         for (var i = 0; i < data.length; i++) {
+
             var ID = data[i].id;
             var NAME = data[i].name;
-            var DESCRIPTION = data[i].description;
-            var HISTORICAL_CONTEXT = data[i].historical_CONTEXT;
-            var IMAGE = data[i].image;
-            var FEATURES = data[i].features;
-            var REQUIREMENTS = data[i].requirements;
-            var UTILITY = data[i].utility;
-            
-            res += "<div class=\"menuitem\">" + NAME + "</div>";            
+
+            res += "<div class=\"menuitem\" data-id=" + ID + ">" + NAME + "</div>";
         }
-                
-        //menu
+
+        // innerHTML
         var element = document.getElementById("districts");
-        element.innerHTML = res;     
-        //название
-        var element = document.getElementById("header");
-        element.innerHTML = "<br>" + data[0].name;
-        //уник способность
-        var element = document.getElementById("description");
-        element.innerHTML = data[0].description;
-        //историч описание
-        var element = document.getElementById("historical_context");
-        element.innerHTML = data[0].historical_CONTEXT;
+        element.innerHTML = res;
     }
 
 }
